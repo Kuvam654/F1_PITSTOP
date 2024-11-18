@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <style>
+            #carouselExample {
+              max-width: 100%; /* Set your desired width */
+              max-height: 680px; /* Set your desired height */
+              overflow: hidden; /* Center the carousel horizontally */
+            }
+            .carousel-item img {
+              width: 100%; /* This ensures the images cover the container */
+              height: 680px; /* Adjusts the image to fit the specified height */
+              object-fit: cover;
+            }
+            .full-width-img {
+                width: 100%;        /* Stretch the image across the full width */
+                height: 300px;      /* Set a fixed height for the image */
+                object-fit: cover;  /* Ensure the image covers the area without distortion */
+            }
+            body {
+                background-image: url('background.png'); /* Replace with your image URL */
+                background-size: cover;          /* Ensures the image covers the entire page */
+                background-position: center;     /* Centers the image */
+                background-attachment: fixed;    /* Keeps the background fixed when scrolling */
+                height: 100vh;                   /* Ensures the body takes full viewport height */
+                margin: 0;                       /* Removes default margin */
+            }
+            .custom-container {
+      background-color: #f8f9fa; /* Light background color */
+      padding: 30px;              /* Add some padding around the content */
+      border-radius: 8px;         /* Round the corners */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    }
+          </style>
+    </head>
+    <body>
+        <!-- code for navbar -->
+        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="f1.png" alt="F1 Logo" width="30" height="30" class="d-inline-block align-text-top">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Portfolio</a>
+                  </li>
+              </div>
+            </div>
+          </nav>
+
+          <!-- code for moving images -->
+          <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img1.jpg" class="d-block w-100" alt="IMAGE 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img2.jpg" class="d-block w-100" alt="IMAGE 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img3.jpg" class="d-block w-100" alt="IMAGE 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img4.jpg" class="d-block w-100" alt="IMAGE 4">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img5.jpg" class="d-block w-100" alt="IMAGE 5">
+                  </div>
+                </div>
+              </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <!-- Introduction slide -->
+          <div class="container my-5">
+            <div class="card shadow border-0">
+              <div class="card-body text-center p-5">
+                <h1 class="display-4 fw-bold mb-3">Formula 1 Pit Stop Predictor</h1>
+                <p class="lead mb-4">
+                    Welcome to the **Pit Stop Predictor**, your go-to tool for strategizing pit stops in competitive racing. This platform helps you analyze key factors such as weather conditions, track surface, engine performance, and race lap dynamics to determine the optimal timing for pit stops. Whether you're dealing with hot climates causing high tire degradation, wet tracks demanding frequent tire changes, or the unique characteristics of various engine suppliers, our predictor provides tailored insights to maximize your race strategy. Get ready to make data-driven decisions and outsmart the competition on the track!
+                </p>
+                
+              </div>
+            </div>
+          </div>
+
+          <!-- small image-->
+          <div class="container-fluid p-0">
+            <img src="img6.png" alt="Full Width Image" class="full-width-img">
+          </div>
+
+          <!-- Manual Slide -->
+          <div class="container my-5">
+            <div class="card shadow border-0">
+              <div class="card-body text-center p-5">
+                <h1 class="display-4 fw-bold mb-3">Formula 1 Pit Stop Predictor</h1>
+                
+                <!-- Introduction text -->
+                <p class="lead mb-4">
+                  Analyze the factors affecting pit stop strategies in Formula 1 races. Consider weather impact, track condition, engine performance, and lap ranges to optimize your race strategy.
+                </p>
+          
+                <!-- Weather Impact Section -->
+                <div class="text-start mb-4">
+                  <h4><strong>Weather Impact:</strong></h4>
+                  <ul>
+                    <li><strong>Hot Climate:</strong> High tire degradation, so pit stops might need to be scheduled earlier.</li>
+                    <li><strong>Cold Climate:</strong> Lower tire degradation, allowing for delayed pit stops.</li>
+                  </ul>
+                </div>
+          
+                <!-- Track Condition Section -->
+                <div class="text-start mb-4">
+                  <h4><strong>Track Condition:</strong></h4>
+                  <ul>
+                    <li><strong>Dry Track:</strong> Less tire wear, so pit stops might be spread out evenly.</li>
+                    <li><strong>Wet Track:</strong> Higher chance of tire change due to rain, leading to more frequent pit stops.</li>
+                  </ul>
+                </div>
+          
+                <!-- Engine Suppliers Section -->
+                <div class="text-start mb-4">
+                  <h4><strong>Engine Suppliers:</strong></h4>
+                  <ul>
+                    <li><strong>Mercedes AMG F1:</strong> Generally reliable, may require fewer pit stops.</li>
+                    <li><strong>Red Bull Ford Powertrains:</strong> Strong performance but may have higher tire wear.</li>
+                    <li><strong>Ferrari:</strong> Moderate tire wear characteristics.</li>
+                    <li><strong>Honda F1:</strong> Higher reliability but conservative on pit strategy.</li>
+                    <li><strong>Audi:</strong> Balanced performance.</li>
+                  </ul>
+                </div>
+          
+                <!-- Lap Ranges Section -->
+                <div class="text-start">
+                  <h4><strong>Lap Ranges:</strong></h4>
+                  <ul>
+                    <li><strong>Early laps (1-15):</strong> Usually require an aggressive strategy, possibly fewer stops if fuel load is high.</li>
+                    <li><strong>Mid-race laps (16-60):</strong> Standard degradation phases where tire changes are crucial.</li>
+                    <li><strong>Late laps (61-75):</strong> Focus on tire preservation or aggressive overtakes.</li>
+                  </ul>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- Card group -->
+          <div class="container my-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <!-- Card 1 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="spa.png" alt="Card image" class="card-img-top">
+                  <div class="card-body">
+                    <h5 class="card-title">Spa-Francorchamps</h5>
+                    <p class="card-text">Iconic Belgian circuit known for challenging corners and unpredictable weather.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Nurburring.png" alt="Card image" class="card-img-top">
+                  <div class="card-body">
+                    <h5 class="card-title">Nürburgring</h5>
+                    <p class="card-text">Historic German track, notorious for its challenging 'Green Hell' layout.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="monza.png" alt="Card image" class="card-img-top">
+                  <div class="card-body">
+                    <h5 class="card-title">Autodromo Nazionale di Monza</h5>
+                    <p class="card-text">Italy's high-speed track, renowned for thrilling races and passionate fans.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container my-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <!-- Card 1 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="monaco.png" alt="Card image" class="card-img-top">
+                  <div class="card-body">
+                    <h5 class="card-title">Circuit de Monaco</h5>
+                    <p class="card-text">Luxurious, tight street circuit with high stakes and glamorous atmosphere.</p>
+                </div>
+              </div>
+            
+              </div>
+              <!-- Card 2 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="interlagos.png" alt="Card image" class="card-img-top">
+                  <div class="card-body">
+                    <h5 class="card-title">Interlagos Circuit</h5>
+                    <p class="card-text">Brazilian circuit famous for unpredictable weather and dramatic race finishes.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="silverstone.png" alt="Card image" class="card-img-top">
+                  <div class="card-body">
+                    <h5 class="card-title">Silverstone Circuit</h5>
+                    <p class="card-text">Historic British track, known for high-speed corners and rich F1 heritage</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container my-5">
+            <div class="custom-container">
+              <h2 class="text-center mb-4">Pit Stop Predictor</h2>
+              <h2>Select the type of weather</h2>
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="weatherButton" data-bs-toggle="dropdown" aria-expanded="false">Select</button>
+  <ul class="dropdown-menu" aria-labelledby="weatherButton">
+    <li><a class="dropdown-item" href="#" onclick="selectWeather('Hot Climate')">Hot Climate</a></li>
+    <li><a class="dropdown-item" href="#" onclick="selectWeather('Cold Climate')">Cold Climate</a></li>
+  </ul>
+</div>
+
+              <div class="container my-5">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <!-- Card 1 -->
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="hot_climate.png" alt="Card image" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Hot Climate</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 2 -->
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="cold_climate.png" alt="Card image" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Cold Climate</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+            
+                <h2>Select the type of track</h2>
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="trackButton" data-bs-toggle="dropdown" aria-expanded="false">Select</button>
+  <ul class="dropdown-menu" aria-labelledby="trackButton">
+    <li><a class="dropdown-item" href="#" onclick="selectTrack('Dry track')">Dry Track</a></li>
+    <li><a class="dropdown-item" href="#" onclick="selectTrack('Wet Track')">Wet Track</a></li>
+  </ul>
+</div>
+
+                <div class="container my-5">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                      <!-- Card 1 -->
+                      <div class="col">
+                        <div class="card h-100">
+                          <img src="dry_climate.png" alt="Card image" class="card-img-top">
+                          <div class="card-body">
+                            <h5 class="card-title">Dry Track</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Card 2 -->
+                      <div class="col">
+                        <div class="card h-100">
+                          <img src="wet_climate.png" alt="Card image" class="card-img-top">
+                          <div class="card-body">
+                            <h5 class="card-title">Wet Track</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <h2>Select the Engine supplier</h2>
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" id="engineButton" data-bs-toggle="dropdown" aria-expanded="false">Select</button>
+                  <ul class="dropdown-menu" aria-labelledby="engineButton">
+                    <li><a class="dropdown-item" href="#" onclick="selectEngine('Mercedes AMG F1')">Mercedes AMG F1</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="selectEngine('Red Bull Ford Powertrains')">Red Bull Ford Powertrains</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="selectEngine('Ferrari')">Ferrari</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="selectEngine('Honda F1')">Honda F1</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="selectEngine('Audi')">Audi</a></li>
+                  </ul>
+                </div>
+            <div class="container my-5">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <!-- Card 1 -->
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="mercedes.png" alt="Card image" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Mercedes AMF F1</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 2 -->
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="redbullford.png" alt="Card image" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Red Bull Ford Powertrains</h5>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="ferrari.png" alt="Card image" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Ferrari</h5>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="honda.png" alt="Card image" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Honda</h5>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="audi.png" alt="Card image" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Audi</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <h2>Select the lap</h2>
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" id="lapButton" data-bs-toggle="dropdown" aria-expanded="false">Select</button>
+                  <ul class="dropdown-menu" aria-labelledby="lapButton">
+                    <li><a class="dropdown-item" href="#" onclick="selectLap('1-15')">1-15</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="selectLap('16-30')">16-30</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="selectLap('31-45')">31-45</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="selectLap('46-60')">46-60</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="selectLap('61-75')">61-75</a></li>
+                  </ul>
+                </div>
+              
+              <!-- Buttons -->
+              <div class="text-center">
+                <button class="btn btn-danger mx-2" onclick="perform()">Submit</button>
+              </div>
+              <p id = "pa1"></p>
+            </div>
+          </div>
+
+          <!-- Footer Page -->
+          <footer class="bg-light py-5 mt-5">
+            <div class="container text-center">
+              <h2 class="h5 fw-bold">About the Author</h2>
+    
+              <img src="nek.jpg" alt="Author's Picture" class="img-fluid rounded-circle img-thumbnail my-3" style="width: 150px; height: 150px; object-fit: cover;">
+              
+              <p class="lead mt-3">Hello! I'm a student at Manipal University Jaipur, where I am pursuing my academic journey with a keen interest in technology and innovation. As a passionate web developer, I love creating dynamic and interactive websites, constantly exploring new web technologies and frameworks to enhance user experiences. My enthusiasm extends beyond coding, as I am also an avid F1 enthusiast. The thrill of racing, the precision of strategy, and the excitement of each Grand Prix fuel my love for the sport. Combining my technical skills and love for F1, I strive to bring creativity and innovation to every project I work on.</p>
+            </div>
+          </footer>
+
+          <script>
+            // Variables to store selected options
+            let selectedWeather = "";
+            let selectedTrack = "";
+            let selectedEngine = "";
+            let selectedLap = "";
+          
+            // Functions to update selected options
+            function selectWeather(weather) {
+                event.preventDefault(); 
+              selectedWeather = weather;
+              document.getElementById('weatherButton').textContent = weather;
+            }
+          
+            function selectTrack(track) {
+                event.preventDefault(); 
+              selectedTrack = track;
+              document.getElementById('trackButton').textContent = track;
+            }
+          
+            function selectEngine(engine) {
+                event.preventDefault(); 
+              selectedEngine = engine;
+              document.getElementById('engineButton').textContent = engine;
+            }
+          
+            function selectLap(lap) {
+                event.preventDefault(); 
+              selectedLap = lap;
+              document.getElementById('lapButton').textContent = lap;
+            }
+          
+            // Main function to determine pit stop lap
+            function perform() {
+              if (!selectedWeather || !selectedTrack || !selectedEngine || !selectedLap) {
+                document.getElementById("pa1").innerText = "Please make all selections before submitting.";
+                return;
+              }
+          
+              let pitStopLap = 0;
+          
+              // Determine the pit stop strategy based on weather
+              if (selectedWeather === "Hot Climate") {
+                pitStopLap += 5;
+              } else {
+                pitStopLap += 10;
+              }
+          
+              // Adjust based on track condition
+              if (selectedTrack === "Wet Track") {
+                pitStopLap -= 5;
+              }
+          
+              // Adjust based on engine supplier
+              switch (selectedEngine) {
+                case "Mercedes AMG F1":
+                  pitStopLap += 10;
+                  break;
+                case "Red Bull Ford Powertrains":
+                  pitStopLap -= 5;
+                  break;
+                case "Ferrari":
+                  pitStopLap += 5;
+                  break;
+                case "Honda F1":
+                  pitStopLap += 0;
+                  break;
+                case "Audi":
+                  pitStopLap += 5;
+                  break;
+              }
+          
+              // Determine the lap range
+              let lapRangeStart, lapRangeEnd;
+              switch (selectedLap) {
+                case "1-15":
+                  lapRangeStart = 1;
+                  lapRangeEnd = 15;
+                  break;
+                case "16-30":
+                  lapRangeStart = 16;
+                  lapRangeEnd = 30;
+                  break;
+                case "31-45":
+                  lapRangeStart = 31;
+                  lapRangeEnd = 45;
+                  break;
+                case "46-60":
+                  lapRangeStart = 46;
+                  lapRangeEnd = 60;
+                  break;
+                case "61-75":
+                  lapRangeStart = 61;
+                  lapRangeEnd = 75;
+                  break;
+              }
+          
+              // Ensure pit stop lap is within the lap range
+              pitStopLap = Math.max(lapRangeStart, Math.min(pitStopLap, lapRangeEnd));
+          
+              // Display the recommended lap
+              document.getElementById("pa1").innerText = `Recommended pit stop lap: ${pitStopLap}`;
+            }
+          </script>
+          
+            
+            
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
